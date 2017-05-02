@@ -104,7 +104,7 @@ for i in range(N):
 
 
 count = 0
-change = delta + 5
+change = X
 
 while count < 1000:
 
@@ -163,4 +163,7 @@ for i in range(N):
         
         policy[i][j] = po
 
+print
+print "Policy"
+print
 print_nice(policy)

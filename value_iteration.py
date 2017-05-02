@@ -99,13 +99,13 @@ for i in range(N):
 
 
 count = 0
-change = delta + 5
+change = X
 
 while change > 0.01:
 
     print "Iteration :",count
     print_nice(U)
-    print change
+    print "Max change :",change
     print
     UT = copy.deepcopy(U)
     
@@ -133,7 +133,8 @@ while change > 0.01:
 
 print "Iteration :",count
 print_nice(U)
-print change
+print "Max change :",change
+print 
 
 policy = [[0 for j in range(M)] for i in range(N)]
 
@@ -159,4 +160,11 @@ for i in range(N):
         
         policy[i][j] = po
 
+print
+print "Policy"
+print
+print "\t0"
+print "3\t\t1"
+print "\t2"
+print
 print_nice(policy)
