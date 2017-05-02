@@ -1,0 +1,13 @@
+1.	'A' matrix is written transposed for ease of work.
+2.	'X' vector is solution by LP.
+3.	'A*X' vector is AX matrix multiplication which is compared for equality with vector 'Alpha' in LP.
+
+
+4.	'R' is reward vector. Here reward is for each action. So reward is counted with considering probability.
+	( 65 is my team number hence X=65 and R(s,a) = -65/20 = -3.25 )
+	example, for cell (1, 2) - up action, reward is ( 0.8 * 65 + 0.1 * 0 + 0.1 * 0 - 3.25 ) = 48.75
+	example, for cell (1, 0) - right action, reward is ( 0.8 * 0 + 0.1 * 0 + 0.1 * 0 - 3.25 ) = -3.25
+
+5.	ans is the value to be maximized in LP. After solving LP, ans is 18.108 which is optimal utility of start state.
+	In Value Iteration, utility of start state is 16.42
+	The difference is less than delta as expected. Hence Answers of LP and VI match.
